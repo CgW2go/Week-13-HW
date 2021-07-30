@@ -45,29 +45,32 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- My IP Address, Provided upon request
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Jump Box.
+- My Ansible server has access to the Elk VM, the IP of the Jump Box is 10.0.0.8
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | No                  | My Computer          |
+| Web 1    | No                  | 10.0.0.8             |
+| Web 2    | No                  | 10.0.0.8             |
+| Elk      | No                  | 10.0.0.5 / 10.0.0.6  |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- Ansible allows admins to automate tasks instead of having to do all of them manually. This allows said admins to focus on other tasks that can't be automated. 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Download Image Map
+- Download Docker
+- Download Python3
+- Download Docker Python Module
+- Download Elk and set Published Ports
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
