@@ -24,22 +24,22 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly capable, in addition to restricting traffic to the network.
+- Load balancers prevent the use of DDos attacks against an organization. The benifits of a jumpbox machine is to be able to have a more secure machine capable of managing other Virtual machines within our network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
+- Filebeat watches and monitors log files 
+- Metricbeat monitors the metrics of your server through the OS
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name     | Function       | IP Address | Operating System |
+|----------|----------------|------------|------------------|
+| Jump Box | Gateway        | 10.0.0.8   | linux            |
+| Web 1    | Webserver      | 10.0.0.5   | linux            |
+| Web 2    | Webserver      | 10.0.0.6   | linux            |
+| Elk      | Elk Monitering | 10.1.0.4   | linux            |
 
 ### Access Policies
 
